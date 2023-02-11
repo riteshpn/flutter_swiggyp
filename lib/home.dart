@@ -12,28 +12,28 @@ class Homep extends StatefulWidget {
 
 class _HomepState extends State<Homep> {
   List item = [
-    'assets/g2.png',
-    'assets/g2.png',
-    'assets/g2.png',
-    'assets/g2.png',
-    'assets/g2.png',
-    'assets/g2.png',
+    'assets/h5.png',
+    'assets/g3.png',
+    'assets/g3.png',
+    'assets/g5.png',
+    'assets/g6.png',
+    'assets/g7.png',
   ];
   List text1 = [
     'Food',
-    'Dineout',
     'Instamart',
+    'Dineout',
+    'Meat Delivery',
+    'Hnad',
     'Genie',
-    'Meat delivery',
-    'Handpicked',
   ];
   List imgarr = [
     'assets/h1.png',
     'assets/h2.png',
-    'assets/h1.png',
-    'assets/h2.png',
-    'assets/h1.png',
-    'assets/h1.png',
+    'assets/h3.png',
+    'assets/h4.png',
+    'assets/h5.png',
+    'assets/h6.png',
   ];
   var dishesres = ["KFC", "Mac'd", "SahiPaneer", "MuttonCurry", "ChickenCurry"];
   final random = Random();
@@ -43,15 +43,15 @@ class _HomepState extends State<Homep> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-          currentIndex: 4,
+          currentIndex: 0,
           elevation: 100,
           type: BottomNavigationBarType.fixed,
           items: const [
             BottomNavigationBarItem(
                 icon: FaIcon(
-                  FontAwesomeIcons.bowlFood,
+                  FontAwesomeIcons.home,
                 ),
-                label: "food"),
+                label: "home"),
             BottomNavigationBarItem(
                 icon: FaIcon(
                   FontAwesomeIcons.bowlFood,
@@ -59,9 +59,9 @@ class _HomepState extends State<Homep> {
                 label: "food"),
             BottomNavigationBarItem(
                 icon: FaIcon(
-                  FontAwesomeIcons.bowlFood,
+                  FontAwesomeIcons.shop,
                 ),
-                label: "food"),
+                label: "grocery"),
             BottomNavigationBarItem(
                 icon: FaIcon(
                   FontAwesomeIcons.houseMedical,
@@ -152,6 +152,7 @@ class _HomepState extends State<Homep> {
                   child: Container(
                     height: 50,
                     decoration: BoxDecoration(
+                        border: Border.all(color: Colors.orange, width: 2.0),
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10)),
                     child: Row(
