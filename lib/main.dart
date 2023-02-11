@@ -1,5 +1,5 @@
+
 import 'package:all_advance/home.dart';
-import 'package:all_advance/widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
