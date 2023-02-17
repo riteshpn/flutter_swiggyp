@@ -1,6 +1,6 @@
-import 'package:all_advance/home.dart';
 import 'package:all_advance/sighn_up.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class splashscreen extends StatefulWidget {
   const splashscreen({super.key});
@@ -14,8 +14,7 @@ class _splashscreenState extends State<splashscreen> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Sighn_up()));
+      Get.to(()=>const Sighn_up());
     });
   }
 

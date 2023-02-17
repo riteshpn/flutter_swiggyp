@@ -1,4 +1,3 @@
-import 'package:all_advance/home.dart';
 import 'package:all_advance/Login_Screen.dart';
 import 'package:all_advance/sighn_up.dart';
 import 'package:all_advance/splash.dart';
