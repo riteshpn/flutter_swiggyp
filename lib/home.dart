@@ -1,7 +1,11 @@
 import 'dart:math';
 
+import 'package:all_advance/searchd.dart';
+import 'package:all_advance/splash.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 class Homep extends StatefulWidget {
   const Homep({super.key});
@@ -74,7 +78,14 @@ class _HomepState extends State<Homep> {
                 label: "Instamart"),
           ]),
       body: Stack(
+        
         children: [
+          Drawer(
+            child: GestureDetector(child: Text("log out"),onTap: () {
+              FirebaseAuth.instance.signOut();
+              Get.off(()=>splashscreen());
+            },),
+          ),
           Container(
             decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -170,7 +181,8 @@ class _HomepState extends State<Homep> {
                               )),
                         )),
                         InkWell(
-                          onTap: () {},
+                          onTap: () =>
+                              showSearch(context: context, delegate: Search1()),
                           child: const Icon(
                             Icons.search,
                             color: Colors.blueAccent,
