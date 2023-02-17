@@ -46,11 +46,11 @@ class _Login_screenState extends State<Login_screen> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 30.0),
+                  margin: const EdgeInsets.symmetric(horizontal: 30.0),
                   child: TextFormField(
                     controller: loginEmailController,
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.email_sharp),
+                        prefixIcon: const Icon(Icons.email_sharp),
                         hintText: 'Email',
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20))),
@@ -80,7 +80,7 @@ class _Login_screenState extends State<Login_screen> {
                         try {
                           final User? firebaseUser =(await FirebaseAuth.instance.signInWithEmailAndPassword(email:loginEmail1, password: loginPassword1)).user;
                           if(firebaseUser != null){
-                            Get.to(()=> Homep());
+                            Get.to(()=> const Homep());
 
                           }else{
                             print("Check email and password");

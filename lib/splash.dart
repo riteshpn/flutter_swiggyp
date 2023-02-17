@@ -15,7 +15,7 @@ class _splashscreenState extends State<splashscreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Sighn_up()));
+          context, MaterialPageRoute(builder: (context) => const Sighn_up()));
     });
   }
 

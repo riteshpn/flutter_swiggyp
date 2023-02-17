@@ -23,7 +23,7 @@ import 'package:get/get.dart';
 
                                   }).then((value) => {
                                     FirebaseAuth.instance.signOut(),
-                                    Get.to(()=>Login_screen())
+                                    Get.to(()=>const Login_screen())
                                   });
      
    }on FirebaseAuthException catch (e) {
